@@ -12,7 +12,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import MenuList from './Menu/MenuItems';
-
+import Banner from './Banner';
 
 const drawerWidth = 240;
 
@@ -126,18 +126,10 @@ const useStyles = makeStyles({
 
   }));
 
-  const MenuTextBorder = styled('div')(({ theme }) => ({
-    background: "rgba(210, 215, 217, 0.75)",
-    width: "30%",
-    height: "1px",
-    marginTop: '5px',
-    textAlign: "center",
 
-
-  }));
 function MainBox() {
     const theme = useTheme();
-    const [open, setOpen] = React.useState(false);
+    const [open, setOpen] = React.useState(true);
     const classes = useStyles();
   
     const handleDrawerOpen = () => {
@@ -197,8 +189,10 @@ function MainBox() {
         </Drawer>
         <Main open={open} >
           <DrawerHeader />
-          <Typography paragraph>
           <BorderBar/>
+          <Banner/>
+          <Typography paragraph>
+     
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus non
             enim praesent elementum facilisis leo vel. Risus at ultrices mi tempus
